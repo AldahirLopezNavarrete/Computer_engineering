@@ -1,5 +1,5 @@
 # Computer_engineering
-* This repository contains all my reources of some classes of the University
+* This repository contains all my resources of some classes of the University
 <br>
 
 <p align="center">
