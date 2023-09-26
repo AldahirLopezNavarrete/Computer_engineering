@@ -15,7 +15,9 @@ mensaje2 db "El resultado Rh = ", 0
 .code
 start:
     ; Realizar la operación
-    mov eax, -A             ; EAX = -A
+    
+    mov eax, A              ; EAX = A
+    neg eax                 ; EAX = - A
     imul eax, 9             ; EAX = EAX * 9
     idiv B                  ; EAX = EAX / B
     add eax, 1              ; EAX = EAX + 1
