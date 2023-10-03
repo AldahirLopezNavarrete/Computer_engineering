@@ -6,9 +6,9 @@ TITLE EjerBEg
 INCLUDE Irvine32.inc
 
 ; Mis símbolos
-miCr BYTE 0Dh
-miLf BYTE 0Ah
-miNu BYTE 00h
+miCr = 0Dh
+miLf = 0Ah
+miNu = 00h
 
 .DATA
 n DWORD 4           ; 4 valores a leer
