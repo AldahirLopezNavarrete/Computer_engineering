@@ -44,6 +44,9 @@ outIF:
     CALL WriteString
     LOOP inWHILE     ; Reduce ECX y vuelve al inicio del bucle
 outWHILE:
+    MOV EDX, OFFSET impTot ; Mostrar el mensaje de suma total
+    CALL WriteString
+    CALL WriteInt     ; Mostrar el valor de 'tot'
     MOV EDX, OFFSET adios
     CALL WriteString
     EXIT
