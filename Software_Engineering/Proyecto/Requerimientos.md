@@ -3,7 +3,7 @@
 1. Plataformas y Usabilidad:
   * La aplicación será diseñada como una solución móvil, compatible tanto con sistemas operativos iOS como Android.
   * Deberá ofrecer una interfaz amigable y adaptativa a diversos tamaños de pantalla, garantizando una experiencia de usuario fluida y satisfactoria.
-  * 
+    
 2. Catálogo de Bebidas:
   * La aplicación presentará un menú exhaustivo de las bebidas disponibles en la cafetería, detallando información relevante como:
   * Nombre de la bebida.
