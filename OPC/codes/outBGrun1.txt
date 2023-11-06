@@ -1,0 +1,9 @@
+C:\Users\tote\OPCad21c>ejerBG
+Dato A: -3
+Dato B: 4
+Dato C: 5
+C = B*10: +40
+
+ADIOS.
+
+C:\Users\tote\OPCad21c>

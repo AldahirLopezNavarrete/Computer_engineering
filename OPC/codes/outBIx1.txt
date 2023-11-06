@@ -1,0 +1,26 @@
+F:\jubn\S\Acade\OPC\AD2022\clsBK\PrjTtVS19rmtBK\Debug>opc22pri31.exe
+
+Teclee el dato N: -3
+
+
+ERROR. TRY AGAIN, out of range N: 0
+Teclee el dato N: -1
+
+
+ERROR. TRY AGAIN, out of range N: 0
+Teclee el dato N: 0
+
+
+ERROR. TRY AGAIN, out of range N: 0
+Teclee el dato N: 6
+
+Siguiente termino: +1
+Siguiente termino: +3
+Siguiente termino: +8
+Siguiente termino: +10
+Siguiente termino: +15
+Siguiente termino: +17
+
+ADIOS.
+
+F:\jubn\S\Acade\OPC\AD2022\clsBK\PrjTtVS19rmtBK\Debug>
