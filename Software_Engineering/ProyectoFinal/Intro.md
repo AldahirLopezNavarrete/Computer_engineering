@@ -112,7 +112,7 @@ Para asegurar que la aplicación MellRouses cumple con todos los estándares de 
 
 # Código del proyecto
 
-El codigo del proyecto lo puedes encontrar en el siguiente link: 
+El codigo del proyecto lo puedes encontrar en el siguiente link:[Plan de Calidad] (https://github.com/AldahirLopezNavarrete/Computer_engineering/tree/71c94a7fa399bc44e8f61e306f27ffdc9ae6d2fb/Software_Engineering/ProyectoFinal/Codigo).
 
 # Documentación para replicar
 
