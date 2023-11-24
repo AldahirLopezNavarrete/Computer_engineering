@@ -120,7 +120,7 @@ Para contribuir al codigo seguir los siguientes pasos:
 
 1. Sigue la [documentación para descargar](https://code.visualstudio.com/) para descargar Visual Stdio Code (preferentemente). 
 
-2. Clonar el repositorio: `git clone https://github.com/emiliocantuc/proyectoFinalSoftware.git`.
+2. Clonar el repositorio: `git clone https://github.com/AldahirLopezNavarrete/Computer_engineering.git`.
 
 3. Abrir el repositorio en entorno de desarrollo recomendado VS Code. 
 
