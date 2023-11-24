@@ -119,8 +119,7 @@ El codigo del proyecto lo puedes encontrar en el siguiente link:
 
 # Propuesta económica
 
-La propuesta economica la puedes encontrar a detalle en: [Propuesta económica](https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/8f6fa2bba5886363fd4f78ae78b5dbaaf03edb99/Software_Engineering/ProyectoFinal/Plan%20de%20Calidad.md).
-
+La propuesta economica la puedes encontrar a detalle en: [Propuesta económica](https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/6e2565917761488898be976c43c2e1de5a19b9cf/Software_Engineering/ProyectoFinal/CostosProyecto.xlsx)
 
 
 # Link de la presentación
