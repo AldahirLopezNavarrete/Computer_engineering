@@ -138,3 +138,4 @@ La propuesta economica la puedes encontrar a detalle en: [Plan de Calidad] (http
 
 
 # Link de la presentación
+(https://www.canva.com/design/DAF1DuiI0RE/RYybyH9D9MiAu0mRxBnXJA/edit?utm_content=DAF1DuiI0RE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
