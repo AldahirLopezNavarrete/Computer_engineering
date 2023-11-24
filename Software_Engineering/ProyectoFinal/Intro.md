@@ -70,7 +70,7 @@ Integrantes: Aldahir Navarrate, Alexis Santillan, Salvador Quiroz, Luis Rojas y 
 1. **Registro de Usuario:**
 
 <p align="center">
-  <img src="https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/main/Software_Engineering/images/1.png](https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/e806f3d6e3d9d5a0f107dc25e00e198f1012cb25/Software_Engineering/ProyectoFinal/RegistroUsuario.PNG)" alt="Descripción de la imagen">
+  <img src="https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/e806f3d6e3d9d5a0f107dc25e00e198f1012cb25/Software_Engineering/ProyectoFinal/RegistroUsuario.PNG" alt="Descripción de la imagen">
 </p>
 
 2. **Inicio de Sesión:**
