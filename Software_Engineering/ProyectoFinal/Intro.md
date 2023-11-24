@@ -110,6 +110,16 @@ Para asegurar que la aplicación MellRouses cumple con todos los estándares de 
 
 # Metodología
 
+Decidimos emplear la metodología SCRUM para el desarrollo de este proyecto, la cual se deriva de la metodología AGILE. A continuación, expondremos algunas razones fundamentales que respaldaron nuestra elección.
+
+En primer lugar, optamos por SCRUM debido a la familiaridad que ya teníamos con esta metodología. Habíamos utilizado SCRUM para proyecto anteriores a la materia. 
+
+La segunda razón clave fue la gestión efectiva del tiempo disponible para el desarrollo del proyecto. Inicialmente, programamos una reunión de duración moderada en la que definimos las características que debíamos desarrollar, asignamos roles y prioridades. 
+
+Las reuniones SCRUM para informar sobre el progreso y abordar obstáculos se integraron manteniendo reuniones de 5 minutos cada lunes.
+
+Una tercera razón determinante fue la adecuación de SCRUM para proyecto ya que implicaba un proyecto de escalabilidad mucho menor  y de corta duración, lo cual se alineaba con la naturaleza de nuestro proyecto. La colaboración fue un papel importante en nuestro proyecto. 
+
 # Código del proyecto
 
 El codigo del proyecto lo puedes encontrar en el siguiente link:(https://github.com/AldahirLopezNavarrete/Computer_engineering/tree/71c94a7fa399bc44e8f61e306f27ffdc9ae6d2fb/Software_Engineering/ProyectoFinal).
