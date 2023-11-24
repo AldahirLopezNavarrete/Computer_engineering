@@ -75,22 +75,33 @@ Integrantes: Aldahir Navarrate, Alexis Santillan, Salvador Quiroz, Luis Rojas y 
 
 2. **Inicio de Sesión:**
 <p align="center">
-  <img src="Software_Engineering/ProyectoFinal/InicioSesion.PNG" alt="Descripción de la imagen">
+  <img src="https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/fc034ce4ecffb281aaa81f0b3ae58bb9392f7b83/Software_Engineering/ProyectoFinal/InicioSesion.PNG" alt="Descripción de la imagen">
 </p>
 
-
 3. **Página de Personalización:**
-  
+
+<p align="center">
+  <img src="https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/8d14f693711186a4bda94587644db4650beb93a6/Software_Engineering/ProyectoFinal/BusquedaBebidas.PNG" alt="Descripción de la imagen">
+</p>
+
 4. **Página de Pago:**
 
+<p align="center">
+  <img src="https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/8d14f693711186a4bda94587644db4650beb93a6/Software_Engineering/ProyectoFinal/Pago.PNG" alt="Descripción de la imagen">
+</p>
 
 ### Administrador
 
 1. **Gestión de Bebidas:**
 
+<p align="center">
+  <img src="https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/8d14f693711186a4bda94587644db4650beb93a6/Software_Engineering/ProyectoFinal/GestionBebidas.PNG" alt="Descripción de la imagen">
+</p>
 
 2. **Página de Reportes:**
-  - Acceso a un dashboard con métricas relevantes.
+ <p align="center">
+  <img src="https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/8d14f693711186a4bda94587644db4650beb93a6/Software_Engineering/ProyectoFinal/Reportes.PNG" alt="Descripción de la imagen">
+</p>
 
 # Plan de Calidad
 Para asegurar que la aplicación MellRouses cumple con todos los estándares de calidad, seguiremos este Plan de Calidad. Implementaremos acciones que promuevan la accesibilidad, así como medidas que garanticen la autenticación del usuario. Realizaremos pruebas para evaluar y optimizar la confiabilidad y rendimiento de nuestra aplicación. Por último, nos aseguraremos de que nuestro software sea fácil de dar mantenimiento para lograr un producto de alta calidad. A continuación puede acceder al documento con la especificaciones: 
