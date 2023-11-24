@@ -116,6 +116,21 @@ El codigo del proyecto lo puedes encontrar en el siguiente link:[Plan de Calidad
 
 # Documentación para replicar
 
+Para contribuir al codigo seguir los siguientes pasos:
+
+1. Sigue la [documentación para descargar](https://code.visualstudio.com/) para descargar Visual Stdio Code (preferentemente). 
+
+2. Clonar el repositorio: `git clone https://github.com/emiliocantuc/proyectoFinalSoftware.git`.
+
+3. Abrir el repositorio en entorno de desarrollo recomendado VS Code. 
+
+4. Crea una nueva rama del repositorio siguiendo [estos pasos](https://dx.appirio.com/vcs-git/git-with-vs-code/#:~:text=Create%20Branches&text=In%20Visual%20Studio%20Code%2C%20you,command%20into%20the%20input%20bar).
+
+5. Agrega tus cambios al código.
+
+6. Haz commit de tus cambios en github, 
+
+8. En GitHub.com, realiza un pull request de tu rama explicando tus cambios. Si tus cambios son aceptados por el equipo serán agregados a la rama principal. 
 
 # Propuesta económica
 
