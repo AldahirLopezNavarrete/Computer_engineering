@@ -134,7 +134,7 @@ Para contribuir al codigo seguir los siguientes pasos:
 
 # Propuesta económica
 
-La propuesta economica la puedes encontrar a detalle en: [Plan de Calidad] (https://github.com/AldahirLopezNavarrete/Computer_engineering/tree/71c94a7fa399bc44e8f61e306f27ffdc9ae6d2fb/Software_Engineering/ProyectoFinal/Codigo).
+La propuesta economica la puedes encontrar a detalle en: (https://github.com/AldahirLopezNavarrete/Computer_engineering/tree/71c94a7fa399bc44e8f61e306f27ffdc9ae6d2fb/Software_Engineering/ProyectoFinal/Codigo).
 
 
 # Link de la presentación
