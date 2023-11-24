@@ -1,4 +1,4 @@
-# Título: Plan de Calidad
+# Plan de Calidad
 
 ## Objetos de prueba
 
