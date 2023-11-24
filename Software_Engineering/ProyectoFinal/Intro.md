@@ -106,4 +106,21 @@ Integrantes: Aldahir Navarrate, Alexis Santillan, Salvador Quiroz, Luis Rojas y 
 # Plan de Calidad
 Para asegurar que la aplicación MellRouses cumple con todos los estándares de calidad, seguiremos este Plan de Calidad. Implementaremos acciones que promuevan la accesibilidad, así como medidas que garanticen la autenticación del usuario. Realizaremos pruebas para evaluar y optimizar la confiabilidad y rendimiento de nuestra aplicación. Por último, nos aseguraremos de que nuestro software sea fácil de dar mantenimiento para lograr un producto de alta calidad. A continuación puede acceder al documento con la especificaciones: [Plan de Calidad](https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/8f6fa2bba5886363fd4f78ae78b5dbaaf03edb99/Software_Engineering/ProyectoFinal/Plan%20de%20Calidad.md)
 
+# Arquitectura
 
+# Metodología
+
+# Código del proyecto
+
+El codigo del proyecto lo puedes encontrar en el siguiente link: 
+
+# Documentación para replicar
+
+
+# Propuesta económica
+
+La propuesta economica la puedes encontrar a detalle en: [Propuesta económica](https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/8f6fa2bba5886363fd4f78ae78b5dbaaf03edb99/Software_Engineering/ProyectoFinal/Plan%20de%20Calidad.md).
+
+
+
+# Link de la presentación
