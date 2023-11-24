@@ -1,57 +1,65 @@
-# What is software engineering?
+# Título: Plan de Calidad
 
-The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software; that is, the application of engineering to software. (IEEE)
+## Objetos de prueba
 
-## Basic stages at software development
+1. Inicio de sesión para usuario final y administrador.
+2. Funcionamiento correcto del registro de usuarios.
+3. Conexiones entre la personalización de bebida y el cálculo del producto final.
+4. Objetos de prueba:
+   - Ventanas de la página web.
+   - Conexión a la base de datos.
+   - Seguridad en el pago de los productos.
+   - API.
 
-1. **Requirements Gathering and Analysis:**
-   - In this initial stage, the software development team works closely with stakeholders to understand and document the project's requirements.
-   - The goal is to define what the software needs to achieve, its functionality, performance, and other essential features.
-   - This phase also involves feasibility studies and risk assessment to ensure the project is viable.
+## Funcionalidades a probar
 
-2. **Design:**
-   - Once the requirements are clear, the design phase begins.
-   - Software architects and designers create high-level and low-level designs.
-   - High-level design outlines the overall structure and components of the software, while low-level design delves into specifics like database schemas and algorithms.
-   - The design phase also considers factors like user experience (UX) and scalability.
+**Usuario Final:**
+1. Registrar un usuario con los datos necesarios.
+2. Verificar que el usuario pueda acceder después de registrarse.
+3. Personalizar una bebida en la ventana.
 
-3. **Implementation (Coding):**
-   - During this stage, developers write the actual code based on the designs and requirements.
-   - Programming languages and tools are used to create the software's functionality.
-   - Code should be well-documented and adhere to coding standards to ensure readability and maintainability.
+**Administrador:**
+1. Gestionar las bebidas subidas en la plataforma.
 
-4. **Verification and Testing:**
-   - Verification is the process of ensuring that the software meets the specified requirements.
-   - Testing is a crucial part of this stage, involving various types of testing such as unit testing, integration testing, system testing, and user acceptance testing.
-   - Defects and bugs are identified and fixed during this phase.
+## Funcionalidades que no se probarán
 
-5. **Deployment:**
-   - Once the software is thoroughly tested and deemed ready for release, it is deployed to the production environment.
-   - This phase involves setting up servers, databases, and configuring the software for real-world usage.
-   - Deployment may occur in stages, starting with a smaller group of users and gradually expanding to a larger audience.
+**Usuario Final:**
+1. Parte del método de pago.
 
-6. **Maintenance and Support:**
-   - After deployment, the software enters its maintenance phase.
-   - Maintenance includes ongoing bug fixes, updates to address security vulnerabilities, and enhancements to add new features or improve existing ones.
-   - Customer support and user feedback are essential during this stage to ensure the software continues to meet evolving needs.
+**Administrador:**
+1. Visualización del dashboard.
 
-<p align="center">
-  <img src="https://github.com/AldahirLopezNavarrete/Computer_engineering/blob/main/Software_Engineering/images/1.png" alt="Descripción de la imagen">
-</p>
+## Pruebas
 
-## Ethic
+1. Pruebas unitarias:
+   - Detectar problemas de conectividad entre la API y la base de datos.
+2. Pruebas de clases principales de la página web.
+3. Evaluación del comportamiento de los botones de las componentes de la página.
+4. Pruebas integrales solo si los componentes individuales funcionan correctamente, especialmente en el pago de las bebidas.
+5. Garantizar la integridad de datos y prevenir ataques de inyección SQL.
 
-1. **PUBLIC** – Software engineers shall act consistently with the public interest.
-2. **CLIENT AND EMPLOYER** – Software engineers shall act in a manner that is in the best interests of their client and
-employer consistent with the public interest.
-3. **PRODUCT** – Software engineers shall ensure that their products and related modifications meet the highest professional
-standards possible.
-4. **JUDGMENT** – Software engineers shall maintain integrity and independence in their professional judgment.
-5. **MANAGEMENT** – Software engineering managers and leaders shall subscribe to and promote an ethical approach to the
-management of software development and maintenance.
-6. **PROFESSION** – Software engineers shall advance the integrity and reputation of the profession consistent with the public
-interest.
-7. **COLLEAGUES** – Software engineers shall be fair to and supportive of their colleagues.
-8. **SELF** – Software engineers shall participate in lifelong learning regarding the practice of their profession and shall promote
-an ethical approach to the practice of the profession.
+## Pruebas entregables
+
+1. Capturas de pantalla de las vistas.
+2. Videos presentando la funcionalidad.
+
+## Criterios para la aprobación del plan
+
+Se aplicará una calificación discreta del 1 al 3 para cada funcionalidad, considerando rapidez, ejecución correcta y atención a casos extremos.
+
+**Interacción del Usuario Final:**
+- **Inicio de Sesión:**
+  - Calificación 3: Acceso rápido y mensajes adecuados en caso de usuario inválido o contraseña incorrecta.
+- **Registro de Usuario:**
+  - Calificación 3: Creación rápida del usuario, posibilidad de agregar elementos y descripción.
+- **Personalizar Bebida:**
+  - *Ventana de interacción no especificada, por lo que no se asigna una calificación.*
+
+**Interacción del Administrador:**
+- **Gestionar Bebidas:**
+  - *Ventana de interacción no especificada, por lo que no se asigna una calificación.*
+
+## Aprobaciones
+
+Para aprobar el proceso de pruebas, se requiere la autorización de al menos 3 integrantes que confirmen el correcto funcionamiento.
 
