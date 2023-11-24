@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafetería </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        #menu-toggle, #close-menu {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            z-index: 1000;
+        }
+        #menu-toggle {
+            left: 10px;
+        }
+        #close-menu {
+            display: none;
+            right: 10px;
+        }
+        #sidebar {
+            background-color: #eee;
+            height: 100%;
+            width: 150px;
+            position: fixed;
+            top: 0;
+            left: -550px;
+            transition: left 0.3s;
+            padding-top: 50px;
+        }
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            display: block;
+        }
+        #sidebar ul li a:hover {
+            background-color: #ddd;
+        }
+        .search-filters {
+            background-color: #ddd;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        .search-filters input, .search-filters select {
+            padding: 5px;
+        }
+        .product-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            flex-basis: calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .product img {
+            max-width: 100px;
+            height: auto;
+        }
+        #cart-icon {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            padding: 10px;
+            position: fixed;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        #cart {
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            height: 100%;
+            padding: 60px;
+            position: fixed;
+            right: -400px;
+            top: 0;
+            transition: right 0.5s;
+            width: 400px;
+            z-index: 3;
+        }
+        #cart-items, #cart-total {
+            margin-bottom: 10px;
+        }
+        #checkout {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+            position: relative;
+        }
+        .close-button {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            border: none;
+            background: none;
+            color: black;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .remove-item {
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+        }
+
+        .hidden-initially {
+        display: none;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cafetería </h1>
+        <div id="menu-toggle" onclick="toggleMenu()">☰ </div>
+    </header>
+
+    <aside id="sidebar">
+        <div id="close-menu" onclick="toggleMenu()">☰</div>
+        <ul>
+            
+            <li><a href="#" onclick="toggleMenu()">Productos</a></li>
+            <li><a href="inicioSesion.html" onclick="toggleMenu()">Iniciar Sesión</a></li>
+            <li><a href="#" onclick="toggleMenu()">Pedido</a></li>
+            <li class="hidden-initially"><a href="#" onclick="toggleMenu()">Agregar Bebida</a></li>
+            <li class="hidden-initially"><a href="#" onclick="toggleMenu()">Reporte</a></li>
+        </ul>
+    </aside>
+
+    <div class="search-filters">
+        <input type="text" id="search-box" placeholder="Buscar..." oninput="filterProducts()">
+        <select id="filter-temp" onchange="filterProducts()">
+            <option value="">Tipo</option>
+            <option value="caliente">Caliente</option>
+            <option value="frio">Frío</option>
+        </select>
+    </div>
+
+    <div class="product-menu" id="product-menu">
+        <!-- Los productos se generarán aquí -->
+    </div>
+
+    <div id="cart-icon" onclick="toggleCart()">
+        <img src="C:/Users/salva/Downloads/carrito.ico" alt="Carrito de compras" width="30" height="30">
+    </div>
+    
+
+    <aside id="cart">
+        <div id="cart-items"><!-- Aquí se inyectan los elementos del carrito --></div>
+        <div id="cart-total">Total: $0</div>
+        <button id="checkout" onclick="checkout()">Pagar</button>
+    </aside>
+
+    <div id="customize-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeModal()">×</button>
+            <h2>Personaliza tu bebida</h2>
+            <select id="size-options">
+                <option value="0">Pequeño</option>
+                <option value="10">Mediano (+$10)</option>
+                <option value="15">Grande (+$15)</option>
+            </select>
+            <select id="milk-options">
+                <option value="entera">Leche Entera</option>
+                <option value="soya">Leche de Almendra</option>
+                <option value="deslactosada">Leche Deslactosada</option>
+            </select>
+            <button onclick="addToCartFromModal()">Añadir al Carrito</button>
+        </div>
+
+    </div>
+ 
+    <script>
+  
+         
+        let currentProduct = {};
+        const products = [
+            { id: 1, name: 'Café Americano', price: 20, image: "C:/Users/salva/Downloads/americano.png", type: 'caliente' },
+            { id: 2, name: 'Capuchino', price: 25, image: "C:/Users/salva/Downloads/Capuchino.png", type: 'caliente' },
+            { id: 3, name: 'Latte', price: 30, image: "C:/Users/salva/Downloads/Latte.png", type: 'caliente' },
+            { id: 4, name: 'Mocha', price: 28, image: "C:/Users/salva/Downloads/Mocha.png", type: 'caliente' },
+            { id: 5, name: 'Espresso', price: 22, image: "C:/Users/salva/Downloads/Espresso.png", type: 'caliente' },
+            { id: 6, name: 'Frappe', price: 35, image: "C:/Users/salva/Downloads/Frappe.png", type: 'frio' },
+            { id: 7, name: 'Té Chai', price: 24, image: "C:/Users/salva/Downloads/TeChai.png", type: 'caliente' },
+            { id: 8, name: 'Café Helado', price: 27, image: "C:/Users/salva/Downloads/CafeHelado.png", type: 'frio' },
+            { id: 9, name: 'Té Helado', price: 27, image: "C:/Users/salva/Downloads/TeHelado.png", type: 'frio' }
+           
+        ];
+        let cart = [];
+
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const closeButton = document.getElementById('close-menu');
+            const isSidebarVisible = sidebar.style.left === '0px';
+            sidebar.style.left = isSidebarVisible ? '-250px' : '0px';
+            closeButton.style.display = isSidebarVisible ? 'none' : 'block';
+        }
+
+        
+       
+
+    
+
+        function showCustomizeModal(productId) {
+                 alert("Debes iniciar sesión para agregar productos al carrito.");
+    // Aquí finaliza la función y no se muestra el modal de personalización
+    // ni se agrega nada al carrito
+         }
+
+        function addToCartFromModal() {
+            const sizeIncrease = parseInt(document.getElementById('size-options').value);
+            const milkOption = document.getElementById('milk-options').value;
+            const extendedProduct = {
+                ...currentProduct,
+                size: document.getElementById('size-options').selectedOptions[0].text,
+                milk: milkOption,
+                price: currentProduct.price + sizeIncrease
+            };
+            const existingItemIndex = cart.findIndex(item => item.id === extendedProduct.id && item.size === extendedProduct.size && item.milk === extendedProduct.milk);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ ...extendedProduct, quantity: 1 });
+            }
+            updateCartDisplay();
+            document.getElementById('customize-modal').style.display = 'none';
+        }
+
+        function closeModal() {
+            document.getElementById('customize-modal').style.display = 'none';
+        }
+
+        function updateCartDisplay() {
+            const cartItemsElement = document.getElementById('cart-items');
+            cartItemsElement.innerHTML = ''; // Limpiar el contenido actual del carrito
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    ${item.name} - $${item.price} (${item.size}, ${item.milk}) x ${item.quantity}
+                    <button class="remove-item" onclick="removeFromCart(${index})">X</button>
+                `;
+                cartItemsElement.appendChild(itemElement);
+                total += item.price * item.quantity;
+            });
+
+            document.getElementById('cart-total').textContent = 'Total: $' + total.toFixed(2);
+        }
+
+        function removeFromCart(index) {
+            // Elimina el ítem del carrito
+            cart.splice(index, 1);
+            updateCartDisplay(); // Actualiza la visualización del carrito
+        }
+
+        function filterProducts() {
+            const searchQuery = document.getElementById('search-box').value.toLowerCase();
+            const tempFilter = document.getElementById('filter-temp').value;
+            const filteredProducts = products.filter(product => {
+                return (product.name.toLowerCase().includes(searchQuery) || !searchQuery) &&
+                       (product.type === tempFilter || !tempFilter);
+            });
+            renderProducts(filteredProducts);
+        }
+
+        function renderProducts(productsToRender) {
+            const productMenu = document.getElementById('product-menu');
+            productMenu.innerHTML = '';
+            productsToRender.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.className = 'product';
+                productElement.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" style="width:100px; height:auto;">
+                    <h3>${product.name}</h3>
+                    <p>$${product.price}</p>
+                    <button onclick="showCustomizeModal(${product.id})">Agregar al Carrito</button>
+                `;
+                productMenu.appendChild(productElement);
+            });
+        }
+
+        function checkout() {
+            alert('Procesando el pago...');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+    // Inicialización de productos y otros elementos del DOM.
+        renderProducts(products);
+
+    // Establece el estado inicial del carrito en oculto.
+            const cartElement = document.getElementById('cart');
+            if (cartElement) {
+            cartElement.style.right = '-400px';
+                            }
+            });
+
+    function toggleCart() {
+        const cartElement = document.getElementById('cart');
+    // Se asume que si 'right' es '', entonces el carrito debe estar fuera de la vista.
+        const isVisible = cartElement.style.right === '0px';
+    // Alternar la visibilidad del carrito.
+        cartElement.style.right = isVisible ? '-400px' : '0px';
+    }
+
+       
+    </script>
+</body>
+</html>

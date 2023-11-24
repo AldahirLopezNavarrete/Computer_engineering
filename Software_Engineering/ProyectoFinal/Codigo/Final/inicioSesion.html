@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - Cafetería</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #formContainer {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        #formWrapper {
+            width: 350px;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type=text], input[type=password], input[type=email] {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #003d7a;
+        }
+
+        form p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form p a {
+            color: #0056b3;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        form p a:hover {
+            color: #003d7a;
+        }
+    </style>
+</head>
+<body>
+
+<div id="formContainer">
+    <div id="formWrapper">
+        <!-- Formulario de Inicio de Sesión -->
+        <div id="loginForm">
+            <h2>Iniciar Sesión</h2>
+            <form onsubmit="event.preventDefault(); login();">
+                <input type="text" name="username" placeholder="Nombre de Usuario" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+                <p>No tienes una cuenta? <a href="registro.html">Regístrate</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Simulación de base de datos de usuarios
+    var users = [
+        { username: "admin", password: "admin123", isAdmin: true },
+        { username: "user", password: "user123", isAdmin: false }
+    ];
+
+    // Función para iniciar sesión
+    function login() {
+        var username = document.getElementsByName('username')[0].value;
+        var password = document.getElementsByName('password')[0].value;
+
+        var user = users.find(u => u.username === username && u.password === password);
+
+        if (user) {
+            if (user.isAdmin) {
+                // Redirige a la página de la cafetería en modo admin
+                window.location.href = 'admin.html';
+            } else {
+                // Redirige a la página de la cafetería para usuarios regulares
+                window.location.href = 'principal.html';
+            }
+        } else {
+            alert('Usuario o contraseña incorrectos');
+        }
+    }
+</script>
+</body>
+</html>

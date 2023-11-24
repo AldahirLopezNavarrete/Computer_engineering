@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nota de Compra</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        header {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        #nota-compra {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .total {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 10px;
+        }
+        #opciones-pago {
+            margin: 20px 0;
+        }
+        #opciones-pago label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        #datos-tarjeta input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nota de Compra - Cafetería</h1>
+    </header>
+    <div id="nota-compra">
+        <!-- Los detalles del pedido se mostrarán aquí -->
+        
+        <div id="opciones-pago">
+            <h3>Elige tu método de pago</h3>
+            <label>
+                <input type="radio" name="metodo-pago" value="tarjeta" onclick="mostrarFormularioTarjeta()"> Pago con Tarjeta
+            </label>
+            <label>
+                <input type="radio" name="metodo-pago" value="sucursal" onclick="ocultarFormularioTarjeta()"> Pago en Sucursal
+            </label>
+        </div>
+
+        <div id="datos-tarjeta" class="hidden">
+            <h3>Datos de la Tarjeta</h3>
+            <input type="text" placeholder="Número de Tarjeta" />
+            <input type="text" placeholder="Nombre del Titular" />
+            <input type="text" placeholder="Fecha de Vencimiento" />
+            <input type="text" placeholder="CVC" />
+        </div>
+    </div>
+    <footer>
+        <p>Gracias por tu compra!</p>
+    </footer>
+
+    <script>
+        function mostrarFormularioTarjeta() {
+            document.getElementById('datos-tarjeta').classList.remove('hidden');
+        }
+
+        function ocultarFormularioTarjeta() {
+            document.getElementById('datos-tarjeta').classList.add('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart'));
+            const notaCompraDiv = document.getElementById('nota-compra');
+            
+            let total = 0;
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                const itemElement = document.createElement('div');
+                itemElement.className = 'item';
+                itemElement.innerHTML = `
+                    <p>${item.name} - $${item.price} (${item.size}, ${item.milk}) x ${item.quantity}</p>
+                `;
+                notaCompraDiv.insertBefore(itemElement, document.getElementById('opciones-pago'));
+            });
+
+            const totalElement = document.createElement('div');
+            totalElement.className = 'total';
+            totalElement.textContent = 'Total a Pagar: $' + total.toFixed(2);
+            notaCompraDiv.insertBefore(totalElement, document.getElementById('opciones-pago'));
+        });
+    </script>
+</body>
+</html>
