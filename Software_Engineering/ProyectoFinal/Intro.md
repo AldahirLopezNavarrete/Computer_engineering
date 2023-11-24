@@ -74,7 +74,10 @@ Integrantes: Aldahir Navarrate, Alexis Santillan, Salvador Quiroz, Luis Rojas y 
 </p>
 
 2. **Inicio de Sesión:**
-  
+<p align="center">
+  <img src="Software_Engineering/ProyectoFinal/InicioSesion.PNG" alt="Descripción de la imagen">
+</p>
+
 
 3. **Página de Personalización:**
   
